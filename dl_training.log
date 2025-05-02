@@ -1,0 +1,83 @@
+2025-04-29 08:39:58,575 - WARNING - Error checking GPU: module 'keras.api._v2.keras.backend' has no attribute 'tensorflow'
+2025-04-29 08:39:58,575 - INFO - Using CPU.
+2025-04-29 08:40:44,818 - WARNING - Error checking GPU: module 'keras.api._v2.keras.backend' has no attribute 'tensorflow'
+2025-04-29 08:40:44,818 - INFO - Using CPU.
+2025-04-29 08:41:15,830 - WARNING - Error checking GPU: module 'keras.api._v2.keras.backend' has no attribute 'tensorflow'
+2025-04-29 08:41:15,830 - INFO - Using CPU.
+2025-04-29 08:41:15,830 - INFO - Starting deep learning ensemble training
+2025-04-29 08:41:15,830 - INFO - Loading data from D:/JB/ML/data.csv
+2025-04-29 08:44:15,518 - WARNING - Error checking GPU: module 'keras.api._v2.keras.backend' has no attribute 'tensorflow'
+2025-04-29 08:44:15,518 - INFO - Using CPU.
+2025-04-29 08:44:15,518 - INFO - Starting deep learning ensemble training
+2025-04-29 08:44:15,518 - INFO - Loading data from C:/Users/jagad/aiproj/data.csv
+2025-04-29 08:44:15,942 - INFO - Loaded 211043 rows × 44 cols
+2025-04-29 08:44:15,942 - INFO - Preprocessing data for deep learning
+2025-04-29 08:44:16,030 - INFO - Skipping high cardinality column: dst_ip
+2025-04-29 08:44:16,091 - INFO - Skipping high cardinality column: dns_query
+2025-04-29 08:44:16,362 - INFO - Fitting preprocessor and transforming data
+2025-04-29 08:48:22,031 - WARNING - Error checking GPU: module 'keras.api._v2.keras.backend' has no attribute 'tensorflow'
+2025-04-29 08:48:22,031 - INFO - Using CPU.
+2025-04-29 08:48:22,031 - INFO - Starting deep learning ensemble training
+2025-04-29 08:48:22,031 - INFO - Loading data from C:/Users/jagad/aiproj/data.csv
+2025-04-29 08:48:22,426 - INFO - Loaded 211043 rows × 44 cols
+2025-04-29 08:48:22,426 - INFO - Preprocessing data for deep learning
+2025-04-29 08:48:22,520 - INFO - Skipping high cardinality column: dst_ip
+2025-04-29 08:48:22,577 - INFO - Skipping high cardinality column: dns_query
+2025-04-29 08:48:22,838 - INFO - Fitting preprocessor and transforming data
+2025-04-29 08:50:33,251 - WARNING - Error checking GPU: module 'keras.api._v2.keras.backend' has no attribute 'tensorflow'
+2025-04-29 08:50:33,251 - INFO - Using CPU.
+2025-04-29 08:50:33,251 - INFO - Starting deep learning ensemble training
+2025-04-29 08:50:33,251 - INFO - Loading data from C:/Users/jagad/aiproj/data.csv
+2025-04-29 08:50:33,646 - INFO - Loaded 211043 rows × 44 cols
+2025-04-29 08:50:33,646 - INFO - Preprocessing data for deep learning
+2025-04-29 08:50:33,730 - INFO - Skipping high cardinality column: dst_ip
+2025-04-29 08:50:33,787 - INFO - Skipping high cardinality column: dns_query
+2025-04-29 08:50:34,050 - INFO - Fitting preprocessor and transforming data
+2025-04-29 08:52:34,839 - WARNING - Error checking GPU: module 'keras.api._v2.keras.backend' has no attribute 'tensorflow'
+2025-04-29 08:52:34,839 - INFO - Using CPU.
+2025-04-29 08:52:34,839 - INFO - Starting deep learning ensemble training
+2025-04-29 08:52:34,839 - INFO - Loading data from C:/Users/jagad/aiproj/data.csv
+2025-04-29 08:52:35,231 - INFO - Loaded 211043 rows × 44 cols
+2025-04-29 08:52:35,231 - INFO - Preprocessing data for deep learning
+2025-04-29 08:52:35,317 - INFO - Skipping high cardinality column: dst_ip
+2025-04-29 08:52:35,375 - INFO - Skipping high cardinality column: dns_query
+2025-04-29 08:52:35,641 - INFO - Fitting preprocessor and transforming data
+2025-04-29 08:55:58,616 - WARNING - Error checking GPU: module 'keras.api._v2.keras.backend' has no attribute 'tensorflow'
+2025-04-29 08:55:58,616 - INFO - Using CPU.
+2025-04-29 08:55:58,616 - INFO - Starting deep learning ensemble training
+2025-04-29 08:55:58,616 - INFO - Loading data from C:/Users/jagad/aiproj/data.csv
+2025-04-29 08:55:58,989 - INFO - Loaded 211043 rows × 44 cols
+2025-04-29 08:55:58,989 - INFO - Preprocessing data for deep learning
+2025-04-29 08:55:59,075 - INFO - Skipping high cardinality column: dst_ip
+2025-04-29 08:55:59,135 - INFO - Skipping high cardinality column: dns_query
+2025-04-29 08:55:59,406 - INFO - Fitting preprocessor and transforming data
+2025-04-29 08:56:00,539 - INFO - Applying SMOTE to training data of shape (168834, 290)
+2025-04-29 08:56:08,704 - INFO - After SMOTE: shape (400000, 290)
+2025-04-29 08:56:08,759 - INFO - Target has 10 classes
+2025-04-29 08:56:08,820 - INFO - Creating ensemble of neural networks
+2025-04-29 08:56:10,394 - INFO - Training mlp model
+2025-04-29 08:56:37,471 - INFO - mlp model trained in 26.30s
+2025-04-29 08:56:37,473 - INFO - Test accuracy: 0.9552
+2025-04-29 08:56:37,473 - INFO - Test loss: 0.1783
+2025-04-29 08:56:37,473 - INFO - AUC: 0.9981039667050542
+2025-04-29 08:56:37,515 - INFO - Saved mlp model and its components
+2025-04-29 08:56:37,519 - INFO - Saved metrics for mlp to dl_model_metrics.csv
+2025-04-29 08:56:37,519 - INFO - Training deep model
+2025-04-29 08:59:29,323 - INFO - deep model trained in 171.34s
+2025-04-29 08:59:29,323 - INFO - Test accuracy: 0.9183
+2025-04-29 08:59:29,323 - INFO - Test loss: 0.4028
+2025-04-29 08:59:29,323 - INFO - AUC: 0.9962873407921956
+2025-04-29 08:59:29,361 - INFO - Saved deep model and its components
+2025-04-29 08:59:29,363 - INFO - Saved metrics for deep to dl_model_metrics.csv
+2025-04-29 08:59:29,363 - INFO - Training residual model
+2025-04-29 09:00:34,571 - INFO - residual model trained in 64.75s
+2025-04-29 09:00:34,571 - INFO - Test accuracy: 0.8986
+2025-04-29 09:00:34,571 - INFO - Test loss: 0.3323
+2025-04-29 09:00:34,571 - INFO - AUC: 0.9958391653843341
+2025-04-29 09:00:34,617 - INFO - Saved residual model and its components
+2025-04-29 09:00:34,620 - INFO - Saved metrics for residual to dl_model_metrics.csv
+2025-04-29 09:00:34,620 - INFO - Making ensemble predictions
+2025-04-29 09:00:38,877 - INFO - Ensemble Accuracy: 0.9612
+2025-04-29 09:00:38,877 - INFO - Ensemble AUC: 0.9981478955231303
+2025-04-29 09:00:38,893 - INFO - Saved metrics for DL_Ensemble to dl_model_metrics.csv
+2025-04-29 09:00:39,540 - INFO - Deep learning ensemble training complete

@@ -1,0 +1,199 @@
+2025-04-27 20:06:03,561 - INFO - CUDA is available. Using device: NVIDIA GeForce RTX 3050 6GB Laptop GPU
+2025-04-27 20:06:03,561 - INFO - ==================================================
+2025-04-27 20:06:03,561 - INFO - Starting training pipeline on 2025-04-27 20:06:03
+2025-04-27 20:06:03,561 - INFO - ==================================================
+2025-04-27 20:06:03,561 - INFO - Loading data from C:/Users/jagad/aiproj/data.csv
+2025-04-27 20:06:03,927 - INFO - Data loaded successfully. Shape: (211043, 44)
+2025-04-27 20:06:03,927 - INFO - Dataset info: 211043 rows, 44 columns
+2025-04-27 20:06:03,930 - INFO - Column types:
+object     27
+int64      16
+float64     1
+Name: count, dtype: int64
+2025-04-27 20:06:03,930 - INFO - Starting data preprocessing...
+2025-04-27 20:06:03,968 - INFO - Class distribution:
+type
+normal        0.236919
+backdoor      0.094767
+ddos          0.094767
+dos           0.094767
+injection     0.094767
+password      0.094767
+scanning      0.094767
+ransomware    0.094767
+xss           0.094767
+mitm          0.004942
+Name: proportion, dtype: float64
+2025-04-27 20:06:04,000 - INFO - Numerical features: 17, Categorical features: 26
+2025-04-27 20:06:04,173 - INFO - Train set: (168834, 43), Test set: (42209, 43)
+2025-04-27 20:06:07,447 - INFO - Preprocessing completed in 3.27 seconds
+2025-04-27 20:06:07,447 - INFO - Applying SMOTE to balance classes...
+2025-04-27 20:06:50,822 - INFO - SMOTE completed in 43.36 seconds
+2025-04-27 20:06:50,853 - INFO - After SMOTE: train (400000, 1674), test (42209, 1674)
+2025-04-27 20:06:50,976 - INFO - Class distribution after SMOTE:
+type
+password      0.1
+normal        0.1
+backdoor      0.1
+xss           0.1
+ransomware    0.1
+ddos          0.1
+scanning      0.1
+dos           0.1
+mitm          0.1
+injection     0.1
+Name: proportion, dtype: float64
+2025-04-27 20:06:51,371 - INFO - Target encoding mapping: {'backdoor': 0, 'ddos': 1, 'dos': 2, 'injection': 3, 'mitm': 4, 'normal': 5, 'password': 6, 'ransomware': 7, 'scanning': 8, 'xss': 9}
+2025-04-27 20:06:51,554 - INFO - Training GradientBoosting model...
+2025-04-28 14:31:46,638 - INFO - CUDA is available. Using device: NVIDIA GeForce RTX 3050 6GB Laptop GPU
+2025-04-28 14:32:37,389 - INFO - CUDA is available. Using device: NVIDIA GeForce RTX 3050 6GB Laptop GPU
+2025-04-28 15:00:26,776 - INFO - CUDA is available. Using device: NVIDIA GeForce RTX 3050 6GB Laptop GPU
+2025-04-28 15:24:03,074 - INFO - Using device: cuda
+2025-04-28 15:24:03,074 - INFO - Loading data from C:/Users/jagad/aiproj/data.csv
+2025-04-28 15:24:03,496 - INFO - Loaded 211043 rows × 44 cols
+2025-04-28 15:24:03,496 - INFO - Applying UNSW_NB15 specific preprocessing
+2025-04-28 15:24:03,662 - INFO - Skipping high-cardinality column: dst_ip
+2025-04-28 15:24:03,722 - INFO - Skipping high-cardinality column: dns_query
+2025-04-28 15:24:05,286 - INFO - Applying SMOTE to training data of shape (168834, 290)
+2025-04-28 15:24:13,186 - INFO - After SMOTE: shape (400000, 290)
+2025-04-28 15:24:13,282 - INFO - Target classes: 10
+2025-04-28 15:24:13,282 - INFO - Appended results for 
+2025-04-28 15:24:13,282 - INFO - Training XGBoost
+2025-04-28 15:24:13,282 - INFO -  - XGBoost on GPU
+2025-04-28 15:24:24,483 - INFO - XGBoost done in 10.90s, acc=0.9919, AUC=0.999830776750599
+2025-04-28 15:24:25,156 - INFO - Saving XGBoost model using specialized approach
+2025-04-28 15:24:25,191 - INFO - Saved XGBoost and its preprocessor
+2025-04-28 15:24:25,193 - INFO - Appended results for XGBoost
+2025-04-28 15:24:25,193 - INFO - Training RandomForest
+2025-04-28 15:24:48,492 - INFO - RandomForest done in 23.12s, acc=0.9728, AUC=0.9974484711712022
+2025-04-28 15:24:48,720 - INFO - Saved RandomForest and its preprocessor
+2025-04-28 15:24:48,721 - INFO - Appended results for RandomForest
+2025-04-28 15:24:48,721 - INFO - Training LogisticRegression
+2025-04-28 15:37:04,309 - INFO - LogisticRegression done in 735.50s, acc=0.8990, AUC=0.992445379105963
+2025-04-28 15:37:04,555 - INFO - Saved LogisticRegression and its preprocessor
+2025-04-28 15:37:04,558 - INFO - Appended results for LogisticRegression
+2025-04-28 15:37:04,560 - INFO - Training GradientBoosting
+2025-04-28 16:47:42,025 - INFO - GradientBoosting done in 4236.71s, acc=0.9920, AUC=0.9998373047659852
+2025-04-28 16:47:42,246 - INFO - Saved GradientBoosting and its preprocessor
+2025-04-28 16:47:42,248 - INFO - Appended results for GradientBoosting
+2025-04-28 16:47:42,249 - INFO - Training AdaBoost
+2025-04-28 16:49:14,356 - INFO - AdaBoost done in 90.96s, acc=0.6041, AUC=0.8729213455692937
+2025-04-28 16:49:14,521 - INFO - Saved AdaBoost and its preprocessor
+2025-04-28 16:49:14,521 - INFO - Appended results for AdaBoost
+2025-04-28 16:49:14,521 - INFO - Training DecisionTree
+2025-04-28 16:49:21,548 - INFO - DecisionTree done in 6.97s, acc=0.9389, AUC=0.9914517904204025
+2025-04-28 16:49:21,718 - INFO - Saved DecisionTree and its preprocessor
+2025-04-28 16:49:21,720 - INFO - Appended results for DecisionTree
+2025-04-28 16:49:21,720 - INFO - Training KNN
+2025-04-28 16:50:07,098 - INFO - KNN done in 35.38s, acc=0.9865, AUC=0.9928016559707487
+2025-04-28 16:50:08,556 - INFO - Saved KNN and its preprocessor
+2025-04-28 16:50:08,556 - INFO - Appended results for KNN
+2025-04-28 16:50:08,556 - INFO - Training NaiveBayes
+2025-04-28 16:50:12,076 - INFO - NaiveBayes done in 2.52s, acc=0.6662, AUC=0.9761843906376061
+2025-04-28 16:50:12,544 - INFO - Saved NaiveBayes and its preprocessor
+2025-04-28 16:50:12,544 - INFO - Appended results for NaiveBayes
+2025-04-28 19:32:49,844 - INFO - Using device: cuda
+2025-04-28 19:32:49,844 - INFO - Loading data from C:/Users/jagad/aiproj/data.csv
+2025-04-28 19:32:50,320 - INFO - Loaded 211043 rows × 44 cols
+2025-04-28 19:32:50,320 - INFO - Applying UNSW_NB15 specific preprocessing
+2025-04-28 19:32:50,484 - INFO - Skipping high-cardinality column: dst_ip
+2025-04-28 19:32:50,551 - INFO - Skipping high-cardinality column: dns_query
+2025-04-28 19:32:52,181 - INFO - Applying SMOTE to training data of shape (168834, 290)
+2025-04-28 19:33:00,224 - INFO - After SMOTE: shape (400000, 290)
+2025-04-28 19:33:00,333 - INFO - Target classes: 10
+2025-04-28 19:33:00,333 - INFO - Appended results for 
+2025-04-28 19:33:00,333 - INFO - Training XGBoost
+2025-04-28 19:33:00,333 - INFO -  - XGBoost on GPU
+2025-04-28 19:33:11,434 - INFO - XGBoost done in 10.79s, acc=0.9919, AUC=0.999830776750599
+2025-04-28 19:33:12,129 - INFO - Saving XGBoost model using specialized approach
+2025-04-28 19:33:12,161 - INFO - Saved XGBoost and its preprocessor
+2025-04-28 19:33:12,163 - INFO - Appended results for XGBoost
+2025-04-28 19:33:12,163 - INFO - Training RandomForest
+2025-04-28 19:33:35,136 - INFO - RandomForest done in 22.85s, acc=0.9728, AUC=0.9974484711712022
+2025-04-28 19:33:35,311 - INFO - Saved RandomForest and its preprocessor
+2025-04-28 19:33:35,311 - INFO - Appended results for RandomForest
+2025-04-28 19:33:35,314 - INFO - Training LogisticRegression
+2025-04-28 19:43:29,101 - INFO - LogisticRegression done in 593.71s, acc=0.8990, AUC=0.992445379105963
+2025-04-28 19:43:29,292 - INFO - Saved LogisticRegression and its preprocessor
+2025-04-28 19:43:29,292 - INFO - Appended results for LogisticRegression
+2025-04-28 19:43:29,292 - INFO - Training GradientBoosting
+2025-04-28 20:32:16,013 - INFO - GradientBoosting done in 2925.98s, acc=0.9920, AUC=0.9998373047659852
+2025-04-28 20:32:16,180 - INFO - Saved GradientBoosting and its preprocessor
+2025-04-28 20:32:16,180 - INFO - Appended results for GradientBoosting
+2025-04-28 20:32:16,180 - INFO - Training AdaBoost
+2025-04-28 20:33:54,935 - INFO - AdaBoost done in 97.59s, acc=0.6041, AUC=0.8729213455692937
+2025-04-28 20:33:55,110 - INFO - Saved AdaBoost and its preprocessor
+2025-04-28 20:33:55,112 - INFO - Appended results for AdaBoost
+2025-04-28 20:33:55,112 - INFO - Training DecisionTree
+2025-04-28 20:34:02,695 - INFO - DecisionTree done in 7.52s, acc=0.9389, AUC=0.9914517904204025
+2025-04-28 20:34:02,855 - INFO - Saved DecisionTree and its preprocessor
+2025-04-28 20:34:02,855 - INFO - Appended results for DecisionTree
+2025-04-28 20:34:02,855 - INFO - Training KNN
+2025-04-28 20:34:52,407 - INFO - KNN done in 39.91s, acc=0.9865, AUC=0.9928016559707487
+2025-04-28 20:34:53,749 - INFO - Saved KNN and its preprocessor
+2025-04-28 20:34:53,755 - INFO - Appended results for KNN
+2025-04-28 20:34:53,755 - INFO - Training NaiveBayes
+2025-04-28 20:34:57,155 - INFO - NaiveBayes done in 2.41s, acc=0.6662, AUC=0.9761843906376061
+2025-04-28 20:34:57,572 - INFO - Saved NaiveBayes and its preprocessor
+2025-04-28 20:34:57,572 - INFO - Appended results for NaiveBayes
+2025-04-29 08:08:17,620 - INFO - Using device: cpu
+2025-04-29 08:08:17,621 - INFO - Loading data from C:/Users/jagad/aiproj/data.csv
+2025-04-29 08:08:18,137 - INFO - Loaded 211043 rows × 44 cols
+2025-04-29 08:08:18,140 - INFO - Applying UNSW_NB15 specific preprocessing
+2025-04-29 08:08:18,314 - INFO - Skipping high-cardinality column: dst_ip
+2025-04-29 08:08:18,381 - INFO - Skipping high-cardinality column: dns_query
+2025-04-29 08:08:20,027 - INFO - Applying SMOTE to training data of shape (168834, 290)
+2025-04-29 08:08:31,468 - INFO - After SMOTE: shape (400000, 290)
+2025-04-29 08:08:31,587 - INFO - Target classes: 10
+2025-04-29 08:08:31,587 - INFO - Appended results for 
+2025-04-29 08:08:31,604 - INFO - Training XGBoost
+2025-04-29 08:08:31,604 - INFO -  - XGBoost on CPU
+2025-04-29 08:08:44,289 - INFO - XGBoost done in 12.53s, acc=0.9919, AUC=0.9998304542675912
+2025-04-29 08:08:45,746 - INFO - Saving XGBoost model using specialized approach
+2025-04-29 08:08:45,777 - INFO - Saved XGBoost and its preprocessor
+2025-04-29 08:08:45,779 - INFO - Appended results for XGBoost
+2025-04-29 08:08:45,781 - INFO - Training RandomForest
+2025-04-29 09:04:49,482 - INFO - Using device: cuda
+2025-04-29 09:04:49,482 - INFO - Loading data from C:/Users/jagad/aiproj/data.csv
+2025-04-29 09:04:49,865 - INFO - Loaded 211043 rows × 44 cols
+2025-04-29 09:04:49,865 - INFO - Applying UNSW_NB15 specific preprocessing
+2025-04-29 09:04:49,980 - INFO - Skipping high-cardinality column: dst_ip
+2025-04-29 09:04:50,038 - INFO - Skipping high-cardinality column: dns_query
+2025-04-29 09:04:51,382 - INFO - Applying SMOTE to training data of shape (168834, 290)
+2025-04-29 09:04:58,794 - INFO - After SMOTE: shape (400000, 290)
+2025-04-29 09:04:58,884 - INFO - Target classes: 10
+2025-04-29 09:04:58,889 - INFO - Appended results for 
+2025-04-29 09:04:58,891 - INFO - Training XGBoost
+2025-04-29 09:04:58,891 - INFO -  - XGBoost on GPU
+2025-04-29 09:05:09,835 - INFO - XGBoost done in 10.66s, acc=0.9919, AUC=0.999830776750599
+2025-04-29 09:05:10,090 - INFO - Saving XGBoost model using specialized approach
+2025-04-29 09:05:10,129 - INFO - Saved XGBoost and its preprocessor
+2025-04-29 09:05:10,131 - INFO - Appended results for XGBoost
+2025-04-29 09:05:10,131 - INFO - Training RandomForest
+2025-04-29 09:05:33,181 - INFO - RandomForest done in 22.92s, acc=0.9728, AUC=0.9974484711712022
+2025-04-29 09:05:33,347 - INFO - Saved RandomForest and its preprocessor
+2025-04-29 09:05:33,347 - INFO - Appended results for RandomForest
+2025-04-29 09:05:33,347 - INFO - Training LogisticRegression
+2025-04-29 09:18:11,360 - INFO - LogisticRegression done in 757.88s, acc=0.8990, AUC=0.992445379105963
+2025-04-29 09:18:11,590 - INFO - Saved LogisticRegression and its preprocessor
+2025-04-29 09:18:11,590 - INFO - Appended results for LogisticRegression
+2025-04-29 09:18:11,590 - INFO - Training GradientBoosting
+2025-04-29 11:52:07,966 - INFO - GradientBoosting done in 9235.32s, acc=0.9920, AUC=0.9998373047659852
+2025-04-29 11:52:08,736 - INFO - Saved GradientBoosting and its preprocessor
+2025-04-29 11:52:08,740 - INFO - Appended results for GradientBoosting
+2025-04-29 11:52:08,741 - INFO - Training AdaBoost
+2025-04-29 11:55:01,624 - INFO - AdaBoost done in 171.46s, acc=0.6041, AUC=0.8729213455692937
+2025-04-29 11:55:01,850 - INFO - Saved AdaBoost and its preprocessor
+2025-04-29 11:55:01,853 - INFO - Appended results for AdaBoost
+2025-04-29 11:55:01,854 - INFO - Training DecisionTree
+2025-04-29 11:55:16,968 - INFO - DecisionTree done in 15.01s, acc=0.9389, AUC=0.9914517904204025
+2025-04-29 11:55:17,183 - INFO - Saved DecisionTree and its preprocessor
+2025-04-29 11:55:17,185 - INFO - Appended results for DecisionTree
+2025-04-29 11:55:17,185 - INFO - Training KNN
+2025-04-29 11:56:27,098 - INFO - KNN done in 59.86s, acc=0.9865, AUC=0.9928016559707487
+2025-04-29 11:56:28,712 - INFO - Saved KNN and its preprocessor
+2025-04-29 11:56:28,714 - INFO - Appended results for KNN
+2025-04-29 11:56:28,714 - INFO - Training NaiveBayes
+2025-04-29 11:56:32,945 - INFO - NaiveBayes done in 3.06s, acc=0.6662, AUC=0.9761843906376061
+2025-04-29 11:56:33,752 - INFO - Saved NaiveBayes and its preprocessor
+2025-04-29 11:56:33,753 - INFO - Appended results for NaiveBayes
